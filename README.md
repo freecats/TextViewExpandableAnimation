@@ -1,9 +1,9 @@
 # TextViewExpandableAnimation#
 Expandable TextView With Smooth Transition Animation
 
-## preview ##
+## Preview ##
 ![preview](https://github.com/freecats/TextViewExpandableAnimation/blob/master/preview.gif)
-## How do get it work？ ##
+## How to get it work？ ##
 * Clone or download my project 
 
 * Copy TextViewExpandableAnimation.java and some resource files such as attrs.xml into your own project
