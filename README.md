@@ -1,4 +1,4 @@
-# TextViewExpandableAnimation#
+﻿# TextViewExpandableAnimation#
 Expandable TextView With Smooth Transition Animation
 
 ## Preview ##
@@ -33,14 +33,29 @@ All Done!
 
 <br>Attributes Support as below
 
-| Attrs         |
-| ------------- |
-| tvea_expandLines      | 
-| tvea_expandBitmap      | 
-| tvea_shrinkBitmap      | 
-| tvea_textContentColor |
-| tvea_textContentSize | 
-| tvea_textExpand |
-| tvea_textShrink | 
-| tvea_textStateColor |
+| Attributes            |format|
+| -------------|------------- |
+| tvea_expandLines      | integer | 
+| tvea_expandBitmap     | reference | 
+| tvea_shrinkBitmap     |reference  | 
+| tvea_textContentColor | color| 
+| tvea_textContentSize  |dimension  | 
+| tvea_textExpand       |string | 
+| tvea_textShrink       |string  | 
+| tvea_textStateColor   |color | 
 
+# License
+
+
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
