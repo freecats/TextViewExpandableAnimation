@@ -247,7 +247,7 @@ public class TextViewExpandableAnimation extends LinearLayout
                 isInitTextView = false;
                 if (isExpandNeeded) {
                     isShrink = true;
-                    doAnimation(textLines, expandLines, WHAT_ANIMATION_END);
+                    doAnimation(expandLines, expandLines, WHAT_ANIMATION_END);
                 } else {
                     isShrink = false;
                     doNotExpand();
@@ -418,6 +418,7 @@ public class TextViewExpandableAnimation extends LinearLayout
 
     public void resetState(boolean isShrink) {
 
+        this.isShrink = isShrink;
         if (textLines > expandLines) {
             if (isShrink) {
                 rlToggleLayout.setVisibility(View.VISIBLE);
