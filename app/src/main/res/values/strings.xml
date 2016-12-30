@@ -3,4 +3,7 @@
     <string name="expand">expand</string>
     <string name="shrink">shrink</string>
     <string name="tips">This is a custom TextView that can be expanded with a smooth transition animation,you can set the number of lines to expand,change its icon or text and so on\n</string>
+    <string name="tips_short">Hello there,i am a short text for test</string>
+    <string name="go_to_normal_mode">go to normal mode</string>
+    <string name="go_to_recycler_view_mode">go to recycler view mode</string>
 </resources>

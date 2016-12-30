@@ -138,6 +138,8 @@ public class TextViewExpandableAnimation extends LinearLayout
      */
     private int sleepTime = 22;
 
+    public OnStateChangeListener onStateChangeListener;
+
     /**
      * handler信号
      * <br>handler signal
@@ -253,6 +255,10 @@ public class TextViewExpandableAnimation extends LinearLayout
                 return true;
             }
         });
+
+        if (!isInitTextView) {
+            textLines = textView.getLineCount();
+        }
 
     }
 
@@ -389,6 +395,7 @@ public class TextViewExpandableAnimation extends LinearLayout
     public void onClick(View v) {
         if (v.getId() == R.id.rl_expand_text_view_animation_toggle_layout || v.getId() == R.id.tv_expand_text_view_animation) {
             clickImageToggle();
+            if (null != onStateChangeListener) onStateChangeListener.onStateChange(isShrink);
         }
 
     }
@@ -407,6 +414,27 @@ public class TextViewExpandableAnimation extends LinearLayout
         // 切换状态
         // set flag
         isShrink = !isShrink;
+    }
+
+    public void resetState(boolean isShrink) {
+
+        if (textLines > expandLines) {
+            if (isShrink) {
+                rlToggleLayout.setVisibility(View.VISIBLE);
+                ivExpandOrShrink.setBackgroundDrawable(drawableExpand);
+                textView.setOnClickListener(this);
+                textView.setMaxLines(expandLines);
+                tvState.setText(textExpand);
+            } else {
+                rlToggleLayout.setVisibility(View.VISIBLE);
+                ivExpandOrShrink.setBackgroundDrawable(drawableShrink);
+                textView.setOnClickListener(this);
+                textView.setMaxLines(textLines);
+                tvState.setText(textShrink);
+            }
+        } else {
+            doNotExpand();
+        }
     }
 
     public Drawable getDrawableShrink() {
@@ -454,4 +482,11 @@ public class TextViewExpandableAnimation extends LinearLayout
         this.sleepTime = sleepTime;
     }
 
+    public interface OnStateChangeListener {
+        void onStateChange(boolean isShrink);
+    }
+
+    public void setOnStateChangeListener(OnStateChangeListener onStateChangeListener) {
+        this.onStateChangeListener = onStateChangeListener;
+    }
 }

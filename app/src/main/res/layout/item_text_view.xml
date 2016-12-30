@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.freecats.demo.view.TextViewExpandableAnimation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tv_expand"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:tvea_expandBitmap="@drawable/icon_green_arrow_down"
+    app:tvea_expandLines="3"
+    app:tvea_shrinkBitmap="@drawable/icon_green_arrow_up"
+    app:tvea_textContentColor="@color/color_gray_light_content_text"
+    app:tvea_textContentSize="@dimen/sp_txt_size_content"
+    app:tvea_textExpand="@string/expand"
+    app:tvea_textShrink="@string/shrink"
+    app:tvea_textStateColor="@color/colorPrimary">
+
+</com.freecats.demo.view.TextViewExpandableAnimation>

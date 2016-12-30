@@ -3,4 +3,7 @@
     <string name="expand">展开</string>
     <string name="shrink">收缩</string>
     <string name="tips">这是一个可以伸缩展开并且带平缓过渡动画的自定义文本控件，你可以设置其展开的行数，伸缩收起的图标，伸缩收起的文本和颜色等\n</string>
+    <string name="tips_short">啦啦啦，我是一个供测试的短文本</string>
+    <string name="go_to_normal_mode">跳转到一般模式</string>
+    <string name="go_to_recycler_view_mode">跳转到RecyclerView列表模式</string>
 </resources>
