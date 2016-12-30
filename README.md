@@ -31,6 +31,26 @@ Expandable TextView With Smooth Transition Animation
 ```
 All Done!
 
+If you use it as an item in `RecyclerView`, you may have to make sure  your `RecyclerView Adapter's onBindViewHolder` looks like this to avoid `Unexpected Shrink/Expand State`.
+```java
+@Override
+    public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, final int position) {
+        //record its state
+        holder.tvExpand.setOnStateChangeListener(new TextViewExpandableAnimation.OnStateChangeListener() {
+            @Override
+            public void onStateChange(boolean isShrink) {
+                ContentModel cm = mLists.get(position);
+                cm.setShrink(isShrink);
+                mLists.set(position, cm);
+            }
+        });
+        holder.tvExpand.setText(mLists.get(position).getText());
+        //important! reset its state as where it left
+        holder.tvExpand.resetState(mLists.get(position).isShrink());
+
+    }
+
+```
 <br>Attributes Support as below
 
 | Attributes            |format|
